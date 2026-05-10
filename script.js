@@ -39,10 +39,10 @@
                 <div class="movie-info">
                     <span class="movie-title">${escapeHtml(movie.title)}</span>
                     <div class="movie-meta">
-                        <span>📺 ${movie.episodes.length} tập</span>
+                        <span>Có ${movie.episodes.length} tập</span>
                     </div>
                 </div>
-                <button class="watch-btn" data-id="${movie.id}">▶ Xem</button>
+                <button class="watch-btn" data-id="${movie.id}">Xem phim</button>
             `;
             card.querySelector('.watch-btn').addEventListener('click', () => openPlayer(movie));
             movieContainer.appendChild(card);
@@ -166,21 +166,19 @@
         errorMsg.style.display = 'block';
     }
 
-    // Load danh sách phim từ file movies.json
     async function fetchMovies() {
         try {
             const res = await fetch('movies.json');
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
-            if (!Array.isArray(data)) throw new Error('Sai định dạng JSON');
+            if (!Array.isArray(data)) throw new Error('Lỗi.');
             moviesAll = data;
             renderMovies(moviesAll);
         } catch (err) {
             console.error(err);
-            movieContainer.innerHTML = '<div class="no-result">⚠️ Không thể tải danh sách phim từ movies.json. Kiểm tra file hoặc thử lại sau.</div>';
+            movieContainer.innerHTML = '<div class="no-result">Lỗi vui lòng thử lại sau!</div>';
         }
     }
 
-    // Khởi chạy
     fetchMovies();
 })();
