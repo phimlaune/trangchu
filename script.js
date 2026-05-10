@@ -15,6 +15,8 @@
     const errorMsg = document.getElementById('errorMessage');
     const backBtn = document.getElementById('backButton');
 
+    let youtubeIframe = null;
+
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('keydown', function(e) {
         if (
@@ -39,10 +41,10 @@
                 <div class="movie-info">
                     <span class="movie-title">${escapeHtml(movie.title)}</span>
                     <div class="movie-meta">
-                        <span>Có ${movie.episodes.length} tập</span>
+                        <span>Hiện có ${movie.episodes.length} tập</span>
                     </div>
                 </div>
-                <button class="watch-btn" data-id="${movie.id}">Xem phim</button>
+                <button class="watch-btn" data-id="${movie.id}">▶ Xem</button>
             `;
             card.querySelector('.watch-btn').addEventListener('click', () => openPlayer(movie));
             movieContainer.appendChild(card);
@@ -81,47 +83,57 @@
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-    backBtn.addEventListener('click', () => {
-        if (hls) {
-            hls.destroy();
-            hls = null;
+    function clearYouTubeIframe() {
+        if (youtubeIframe) {
+            youtubeIframe.remove();
+            youtubeIframe = null;
         }
+        videoPlayer.style.display = '';
         videoPlayer.pause();
         videoPlayer.removeAttribute('src');
         videoPlayer.load();
-        errorMsg.style.display = 'none';
-        playerScreen.classList.remove('active');
-        homeScreen.classList.add('active');
-        currentMovie = null;
-        currentEpIdx = 0;
-        filterMovies();
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
+    }
 
-    function renderEpisodeButtons() {
-        if (!currentMovie) return;
-        episodeButtonsContainer.innerHTML = '';
-        currentMovie.episodes.forEach((ep, idx) => {
-            const btn = document.createElement('button');
-            btn.className = 'ep-btn';
-            if (idx === currentEpIdx) btn.classList.add('active');
-            btn.textContent = `Tập ${ep.ep}`;
-            btn.addEventListener('click', () => {
-                if (idx === currentEpIdx) return;
-                document.querySelectorAll('.ep-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentEpIdx = idx;
-                loadEpisode(idx);
-            });
-            episodeButtonsContainer.appendChild(btn);
-        });
+    function isYouTubeUrl(url) {
+        return url.includes('youtube.com') || url.includes('youtu.be');
+    }
+
+    function getYouTubeEmbedUrl(url) {
+        let videoId = '';
+        if (url.includes('youtu.be/')) {
+            videoId = url.split('youtu.be/')[1].split(/[?#]/)[0];
+        } else if (url.includes('youtube.com/watch')) {
+            const params = new URLSearchParams(url.split('?')[1]);
+            videoId = params.get('v');
+        } else if (url.includes('youtube.com/embed/')) {
+            videoId = url.split('embed/')[1].split(/[?#]/)[0];
+        }
+        if (videoId) return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        return url;
     }
 
     function loadEpisode(index) {
         if (!currentMovie || !currentMovie.episodes[index]) return;
         const url = currentMovie.episodes[index].url;
         errorMsg.style.display = 'none';
+        clearYouTubeIframe();
 
+        if (isYouTubeUrl(url)) {
+            videoPlayer.style.display = 'none';
+            const embedUrl = getYouTubeEmbedUrl(url);
+            youtubeIframe = document.createElement('iframe');
+            youtubeIframe.src = embedUrl;
+            youtubeIframe.width = '100%';
+            youtubeIframe.height = '100%';
+            youtubeIframe.frameBorder = '0';
+            youtubeIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            youtubeIframe.allowFullscreen = true;
+            const container = document.querySelector('.video-container');
+            container.appendChild(youtubeIframe);
+            return;
+        }
+
+        videoPlayer.style.display = 'block';
         if (hls) {
             hls.destroy();
             hls = null;
@@ -166,17 +178,55 @@
         errorMsg.style.display = 'block';
     }
 
+    function renderEpisodeButtons() {
+        if (!currentMovie) return;
+        episodeButtonsContainer.innerHTML = '';
+        currentMovie.episodes.forEach((ep, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'ep-btn';
+            if (idx === currentEpIdx) btn.classList.add('active');
+            btn.textContent = `Tập ${ep.ep}`;
+            btn.addEventListener('click', () => {
+                if (idx === currentEpIdx) return;
+                document.querySelectorAll('.ep-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentEpIdx = idx;
+                loadEpisode(idx);
+            });
+            episodeButtonsContainer.appendChild(btn);
+        });
+    }
+
+    backBtn.addEventListener('click', () => {
+        if (hls) {
+            hls.destroy();
+            hls = null;
+        }
+        clearYouTubeIframe();
+        videoPlayer.style.display = 'block';
+        videoPlayer.pause();
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+        errorMsg.style.display = 'none';
+        playerScreen.classList.remove('active');
+        homeScreen.classList.add('active');
+        currentMovie = null;
+        currentEpIdx = 0;
+        filterMovies();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
     async function fetchMovies() {
         try {
             const res = await fetch('movies.json');
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
-            if (!Array.isArray(data)) throw new Error('Lỗi.');
+            if (!Array.isArray(data)) throw new Error('Sai định dạng JSON');
             moviesAll = data;
             renderMovies(moviesAll);
         } catch (err) {
             console.error(err);
-            movieContainer.innerHTML = '<div class="no-result">Lỗi vui lòng thử lại sau!</div>';
+            movieContainer.innerHTML = '<div class="no-result">Lỗi!</div>';
         }
     }
 
