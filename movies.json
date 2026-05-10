@@ -3,9 +3,13 @@
         "id": 1,
         "title": "Love Upon A Time | Duyên Kiếp Bên Người",
         "episodes": [
-            { "ep": 1, "url": "https://s6.kkphimplayer6.com/20260329/UT4ZXkGm/3500kb/hls/index.m3u8" },
-            { "ep": 2, "url": "https://s6.kkphimplayer6.com/20260329/UT4ZXkGm/3500kb/hls/index.m3u8" },
-            { "ep": 3, "url": "https://s6.kkphimplayer6.com/20260329/UT4ZXkGm/3500kb/hls/index.m3u8" }
+            { "ep": 1, "url": "https://vip.opstream90.com/20260328/28174_54fae299/3000k/hls/mixed.m3u8" },
+            { "ep": 2, "url": "https://vip.opstream90.com/20260404/28828_bb2dba24/3000k/hls/mixed.m3u8" },
+            { "ep": 3, "url": "https://vip.opstream90.com/20260411/29239_19b5f0dd/3000k/hls/mixed.m3u8" },
+            { "ep": 4, "url": "https://vip.opstream90.com/20260418/29682_1ff655ed/3000k/hls/mixed.m3u8" },
+            { "ep": 5, "url": "https://vip.opstream90.com/20260425/30245_936a0bd1/3000k/hls/mixed.m3u8" },
+            { "ep": 6, "url": "https://vip.opstream90.com/20260502/30751_f6b35e52/3000k/hls/mixed.m3u8" },
+            { "ep": 7, "url": "" }
         ]
     }
 ]
