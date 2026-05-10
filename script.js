@@ -96,8 +96,13 @@
         if (url.includes('youtu.be/')) {
             videoId = url.split('youtu.be/')[1].split(/[?#]/)[0];
         } else if (url.includes('youtube.com/watch')) {
-            const urlObj = new URL(url);
-            videoId = urlObj.searchParams.get('v');
+            try {
+                const urlObj = new URL(url);
+                videoId = urlObj.searchParams.get('v');
+            } catch(e) {
+                const match = url.match(/[?&]v=([^&]+)/);
+                if (match) videoId = match[1];
+            }
         } else if (url.includes('youtube.com/embed/')) {
             videoId = url.split('embed/')[1].split(/[?#]/)[0];
         }
