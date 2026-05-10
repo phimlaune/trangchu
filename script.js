@@ -3,7 +3,6 @@
     let currentMovie = null;
     let currentEpIdx = 0;
     let hls = null;
-    let youtubeIframe = null;
 
     const homeScreen = document.getElementById('homeScreen');
     const playerScreen = document.getElementById('playerScreen');
@@ -15,11 +14,16 @@
     const episodeButtonsContainer = document.getElementById('episodeButtons');
     const errorMsg = document.getElementById('errorMessage');
     const backBtn = document.getElementById('backButton');
-    const videoContainer = document.querySelector('.video-container');
+
+    let youtubeIframe = null;
 
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || (e.ctrlKey && e.key === 'U')) {
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+            (e.ctrlKey && e.key === 'U')
+        ) {
             e.preventDefault();
         }
     });
@@ -37,7 +41,7 @@
                 <div class="movie-info">
                     <span class="movie-title">${escapeHtml(movie.title)}</span>
                     <div class="movie-meta">
-                        <span>📺 ${movie.episodes.length} tập</span>
+                        <span>Hiện có ${movie.episodes.length} tập</span>
                     </div>
                 </div>
                 <button class="watch-btn" data-id="${movie.id}">▶ Xem</button>
@@ -85,6 +89,9 @@
             youtubeIframe = null;
         }
         videoPlayer.style.display = '';
+        videoPlayer.pause();
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
     }
 
     function isYouTubeUrl(url) {
@@ -96,17 +103,12 @@
         if (url.includes('youtu.be/')) {
             videoId = url.split('youtu.be/')[1].split(/[?#]/)[0];
         } else if (url.includes('youtube.com/watch')) {
-            try {
-                const urlObj = new URL(url);
-                videoId = urlObj.searchParams.get('v');
-            } catch(e) {
-                const match = url.match(/[?&]v=([^&]+)/);
-                if (match) videoId = match[1];
-            }
+            const params = new URLSearchParams(url.split('?')[1]);
+            videoId = params.get('v');
         } else if (url.includes('youtube.com/embed/')) {
             videoId = url.split('embed/')[1].split(/[?#]/)[0];
         }
-        if (videoId) return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        if (videoId) return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
         return url;
     }
 
@@ -121,23 +123,17 @@
             const embedUrl = getYouTubeEmbedUrl(url);
             youtubeIframe = document.createElement('iframe');
             youtubeIframe.src = embedUrl;
-            youtubeIframe.setAttribute('width', '100%');
-            youtubeIframe.setAttribute('height', '100%');
-            youtubeIframe.setAttribute('frameborder', '0');
-            youtubeIframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-            youtubeIframe.setAttribute('allowfullscreen', true);
-            youtubeIframe.style.position = 'absolute';
-            youtubeIframe.style.top = '0';
-            youtubeIframe.style.left = '0';
-            youtubeIframe.style.width = '100%';
-            youtubeIframe.style.height = '100%';
-            videoContainer.style.position = 'relative';
-            videoContainer.appendChild(youtubeIframe);
+            youtubeIframe.width = '100%';
+            youtubeIframe.height = '100%';
+            youtubeIframe.frameBorder = '0';
+            youtubeIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            youtubeIframe.allowFullscreen = true;
+            const container = document.querySelector('.video-container');
+            container.appendChild(youtubeIframe);
             return;
         }
 
         videoPlayer.style.display = 'block';
-        videoContainer.style.position = '';
         if (hls) {
             hls.destroy();
             hls = null;
@@ -212,7 +208,6 @@
         videoPlayer.removeAttribute('src');
         videoPlayer.load();
         errorMsg.style.display = 'none';
-        videoContainer.style.position = '';
         playerScreen.classList.remove('active');
         homeScreen.classList.add('active');
         currentMovie = null;
@@ -231,7 +226,7 @@
             renderMovies(moviesAll);
         } catch (err) {
             console.error(err);
-            movieContainer.innerHTML = '<div class="no-result">⚠️ Không thể tải danh sách phim từ movies.json. Kiểm tra file hoặc thử lại sau.</div>';
+            movieContainer.innerHTML = '<div class="no-result">Lỗi!</div>';
         }
     }
 
