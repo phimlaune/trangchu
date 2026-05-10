@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Phim Lau Ne</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen home-screen active" id="homeScreen">
+            <header class="home-header">
+                <h1 class="logo">Kho Phim Miễn Phí</h1>
+                <p class="subtitle">https://www.youtube.com/@phimlaune</p>
+                <a href="https://www.youtube.com/@phimlaune" target="_blank" rel="noopener" class="youtube-link">YouTube: @phimlaune</a>
+            </header>
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Tìm tên phim..." autocomplete="off">
+                <button class="search-btn" id="searchButton">🔍</button>
+            </div>
+            <div class="movie-grid" id="movieListContainer"></div>
+        </div>
+
+        <div class="screen player-screen" id="playerScreen">
+            <div class="player-header">
+                <button class="back-btn" id="backButton">Quay lại</button>
+                <span class="player-title" id="playerMovieTitle"></span>
+            </div>
+            <div class="video-container">
+                <video id="videoPlayer" controls playsinline crossorigin="anonymous"></video>
+            </div>
+            <div class="episodes-section">
+                <h3 class="episodes-heading">Danh sách tập</h3>
+                <div class="episode-list" id="episodeButtons"></div>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+    </div>
+</body>
+</html>
