@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Love Upon A Time | Duyên Kiếp Bên Người",
+        "title": "Love Upon A Time",
         "episodes": [
             { "ep": 1, "url": "https://youtu.be/ZbZew3JDbUc?si=FMu8awZ0osgQdkkY" },
             { "ep": 2, "url": "https://vip.opstream90.com/20260404/28828_bb2dba24/3000k/hls/mixed.m3u8" },
@@ -10,6 +10,45 @@
             { "ep": 5, "url": "https://vip.opstream90.com/20260425/30245_936a0bd1/3000k/hls/mixed.m3u8" },
             { "ep": 6, "url": "https://vip.opstream90.com/20260502/30751_f6b35e52/3000k/hls/mixed.m3u8" },
             { "ep": 7, "url": "https://youtu.be/PGo9xhecKM0?si=eNYaVU2zPJg8ym3Y" }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Duang With You",
+        "episodes": [
+            { "ep": 1, "url": "https://youtu.be/MBMttcyJLqY?si=ahj1bQjTWPEs_Jwq" },
+            { "ep": 2, "url": "https://youtu.be/ehk7IO_Ny0s?si=CM4fY2LDabKmlJY_" },
+            { "ep": 3, "url": "https://youtu.be/2ftx2pmVQyk?si=XLiZ7tFpKWElStA6" },
+            { "ep": 4, "url": "https://youtu.be/zLRCt-LEZIw?si=OTfMtdbtPlXlf9V5" },
+            { "ep": 5, "url": "https://youtu.be/aD3j5bvSpaw?si=0et7d98jJv771o7i" },
+            { "ep": 6, "url": "https://youtu.be/JK_bIdeh1rg?si=bQqqleeybBdkEFrE" },
+            { "ep": 7, "url": "https://youtu.be/XWTLyu4v8yQ?si=8BxfhdIqNYOD-Viw" },
+            { "ep": 8, "url": "https://youtu.be/tZKFmwQEMPQ?si=kzPZ8qk7NxFGrD8b" },
+            { "ep": 9, "url": "https://youtu.be/lQWD3Qu-yP0?si=rd2AAZ26hLtXTvPq" },
+            { "ep": 10, "url": "https://youtu.be/D8Ox4Q8dpjA?si=00elopcqgAM8sqxq" },
+            { "ep": 11, "url": "https://youtu.be/JgxdRCVMPMk?si=FJahBs1JM5HQ9iVe" },
+            { "ep": 12, "url": "https://youtu.be/UbW14ttSNuI?si=XbMO72B_WP9h-A5K" },
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Your Sky (2024)",
+        "episodes": [
+            { "ep": 1, "url": "https://youtu.be/mHqhosctY2w?si=zCxGWCkNBg3-RU0H" },
+            { "ep": 2, "url": "https://youtu.be/YqI9CnLxKPo?si=DJatrCzx39psIHJi" },
+            { "ep": 3, "url": "https://youtu.be/v02bLzSxmPw?si=bLpxYeiuu01IkUv-" },
+            { "ep": 4, "url": "https://youtu.be/bxF6-YVgJ00?si=dseG8GyufzsqD3Dp" },
+            { "ep": 5, "url": "https://youtu.be/s5igkPXrthI?si=nEPgTO4wSTmXs1bb" },
+            { "ep": 6, "url": "https://youtu.be/0bYg1Ao72UI?si=tyoCDA6t35cVGVxu" },
+            { "ep": 7, "url": "https://youtu.be/ZqMz9zZh0oU?si=9MehCsFddw14MsuB" },
+            { "ep": 8, "url": "https://youtu.be/23zmMPj-qgQ?si=EVw1Yi-nf2Qob1SX" },
+            { "ep": 9, "url": "https://youtu.be/yyYDxjfzUbg?si=vfLwdHWNTQSeuHDY" },
+            { "ep": 10, "url": "https://youtu.be/H6B0BtDlQn4?si=cIj0kJXrD-IIqtD9" },
+            { "ep": 11, "url": "https://youtu.be/HEqPhDfpxAY?si=YTfwW7A993WtdQqQ" },
+            { "ep": 12, "url": "https://youtu.be/72ee1mWDVaA?si=SjsRrTv-HfiAyuh4" },
+            { "ep": 13, "url": "https://youtu.be/UYvG2lHsRm4?si=65Amje-7qD3XqLip" },
+            { "ep": 14, "url": "https://youtu.be/tDZs7KH60_c?si=e4psYK3WeXG9Ue6U" },
+            { "ep": 15, "url": "https://youtu.be/GkPhKwdezqI?si=Xjw4ZQoCjCqOnf1b" },
         ]
     }
 ]
