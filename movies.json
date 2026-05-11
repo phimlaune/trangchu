@@ -152,5 +152,15 @@
         "url": "https://youtu.be/GkPhKwdezqI?si=Xjw4ZQoCjCqOnf1b"
       }
     ]
+  },
+  {
+    "id": 4,
+    "title": "We Are Series",
+    "episodes": [
+      {
+        "ep": 1,
+        "url": "https://vip.opstream12.com/20251016/28724_cd54dcc3/3000k/hls/mixed.m3u8"
+      }
+    ]
   }
 ]
