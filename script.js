@@ -59,7 +59,7 @@
                     <span class="movie-index">${num}</span>
                     <span class="movie-title">${title}</span>
                     <div class="movie-meta">
-                        <span>📺 ${epCount} tập</span>
+                        <span>Hiện có ${epCount} tập</span>
                     </div>
                 </div>
                 <button class="watch-btn">
