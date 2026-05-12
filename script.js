@@ -1,3 +1,4 @@
+```javascript
 (function () {
     let moviesAll = [];
     let currentMovie = null;
@@ -19,6 +20,7 @@
 
     function escapeHtml(text) {
         text = String(text || '');
+
         const map = {
             '&': '&amp;',
             '<': '&lt;',
@@ -54,6 +56,7 @@
 
         list.forEach((movie, i) => {
             const title = escapeHtml(movie.title);
+
             const epCount = Array.isArray(movie.episodes)
                 ? movie.episodes.length
                 : 0;
@@ -63,6 +66,7 @@
             const card = document.createElement('div');
 
             card.className = 'movie-card';
+
             card.style.animationDelay = `${i * 0.05}s`;
             card.style.animation = `fadeSlideIn 0.35s ease both`;
 
@@ -120,6 +124,7 @@
     }
 
     searchInput.addEventListener('input', filterMovies);
+
     searchBtn.addEventListener('click', filterMovies);
 
     searchInput.addEventListener('keypress', e => {
@@ -135,14 +140,18 @@
         }
 
         videoPlayer.pause();
+
         videoPlayer.removeAttribute('src');
+
         videoPlayer.load();
     }
 
     function clearYouTubeIframe() {
         if (youtubeIframe) {
             youtubeIframe.src = '';
+
             youtubeIframe.remove();
+
             youtubeIframe = null;
         }
 
@@ -159,41 +168,9 @@
     }
 
     function isMp4Url(url) {
-        url = String(url || '').toLowerCase();
-
-        return (
-            url.includes('.mp4') ||
-            url.includes('drive.google.com') ||
-            url.includes('uc?export=download')
-        );
-    }
-
-    function convertGoogleDriveUrl(url) {
-        url = String(url || '').trim();
-
-        if (!url.includes('drive.google.com')) {
-            return url;
-        }
-
-        let fileId = '';
-
-        const match1 = url.match(/\/file\/d\/([^\/]+)/);
-
-        if (match1 && match1[1]) {
-            fileId = match1[1];
-        }
-
-        const match2 = url.match(/[?&]id=([^&]+)/);
-
-        if (!fileId && match2 && match2[1]) {
-            fileId = match2[1];
-        }
-
-        if (!fileId) {
-            return url;
-        }
-
-        return `https://drive.google.com/uc?export=download&id=${fileId}`;
+        return String(url || '')
+            .toLowerCase()
+            .includes('.mp4');
     }
 
     function getYouTubeEmbedUrl(url) {
@@ -285,20 +262,59 @@
         hideError();
 
         clearVideo();
+
         clearYouTubeIframe();
 
         const episode = currentMovie.episodes[index];
 
-        const url = convertGoogleDriveUrl(
-            String(episode.url || '').trim()
-        );
+        const url = String(episode.url || '').trim();
 
         if (!url) {
             showError('Link video không hợp lệ.');
             return;
         }
 
+        // GOOGLE DRIVE
+        if (url.includes('drive.google.com')) {
+
+            videoPlayer.style.display = 'none';
+
+            let embedUrl = url;
+
+            const match = url.match(/\/file\/d\/([^\/]+)/);
+
+            if (match && match[1]) {
+                embedUrl =
+                    `https://drive.google.com/file/d/${match[1]}/preview`;
+            }
+
+            youtubeIframe = document.createElement('iframe');
+
+            youtubeIframe.src = embedUrl;
+
+            youtubeIframe.allow = 'autoplay';
+
+            youtubeIframe.allowFullscreen = true;
+
+            Object.assign(youtubeIframe.style, {
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
+                border: '0'
+            });
+
+            videoContainer.style.position = 'relative';
+
+            videoContainer.appendChild(youtubeIframe);
+
+            return;
+        }
+
+        // YOUTUBE
         if (isYouTubeUrl(url)) {
+
             videoPlayer.style.display = 'none';
 
             const embedUrl = getYouTubeEmbedUrl(url);
@@ -328,7 +344,9 @@
             return;
         }
 
+        // MP4
         if (isMp4Url(url)) {
+
             videoPlayer.src = url;
 
             videoPlayer.play().catch(() => {});
@@ -336,7 +354,9 @@
             return;
         }
 
+        // HLS NATIVE
         if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+
             videoPlayer.src = url;
 
             videoPlayer.play().catch(() => {});
@@ -344,7 +364,9 @@
             return;
         }
 
+        // HLS.JS
         if (window.Hls && Hls.isSupported()) {
+
             hls = new Hls({
                 debug: false
             });
@@ -359,6 +381,7 @@
             );
 
             hls.on(Hls.Events.ERROR, (event, data) => {
+
                 if (!data.fatal) {
                     return;
                 }
@@ -385,14 +408,17 @@
     }
 
     function openPlayer(movie, epIdx = 0) {
+
         if (!movie) {
             return;
         }
 
         currentMovie = movie;
+
         currentEpIdx = epIdx;
 
         homeScreen.classList.remove('active');
+
         playerScreen.classList.add('active');
 
         playerTitle.textContent =
@@ -409,6 +435,7 @@
     }
 
     backBtn.addEventListener('click', () => {
+
         clearVideo();
 
         clearYouTubeIframe();
@@ -418,9 +445,11 @@
         videoContainer.style.position = '';
 
         playerScreen.classList.remove('active');
+
         homeScreen.classList.add('active');
 
         currentMovie = null;
+
         currentEpIdx = 0;
 
         filterMovies();
@@ -432,6 +461,7 @@
     });
 
     async function fetchMovies() {
+
         movieContainer.innerHTML = `
             <div class="no-result">
                 <span class="no-result-icon">🎬</span>
@@ -440,6 +470,7 @@
         `;
 
         try {
+
             const res = await fetch('./movies.json');
 
             if (!res.ok) {
@@ -462,6 +493,7 @@
         }
 
         catch (err) {
+
             console.error(err);
 
             movieContainer.innerHTML = `
@@ -475,3 +507,4 @@
 
     fetchMovies();
 })();
+```
