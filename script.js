@@ -158,7 +158,11 @@
     }
 
     function isYouTubeUrl(url) {
-        url = String(url || '');
+        url = String(url || '').toLowerCase();
+
+        if (url.includes('drive.google.com')) {
+            return false;
+        }
 
         return (
             url.includes('youtube.com') ||
@@ -506,4 +510,3 @@
 
     fetchMovies();
 })();
-
