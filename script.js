@@ -1,4 +1,3 @@
-```javascript
 (function () {
     let moviesAll = [];
     let currentMovie = null;
@@ -507,4 +506,4 @@
 
     fetchMovies();
 })();
-```
+
