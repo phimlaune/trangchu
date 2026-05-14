@@ -29,11 +29,7 @@
       },
       {
         "ep": 7,
-        "url": "https://drive.google.com/file/d/1-wJH_7Ej7PTcPrSs1KeXLMN-IXG0LQX_/view?usp=sharing"
-      },
-      {
-        "ep": 8,
-        "url": "https://youtu.be/zA5qRWzub6Y?si=AkgUDqkNlUXhXg8b"
+        "url": "https://youtu.be/PGo9xhecKM0?si=eNYaVU2zPJg8ym3Y"
       }
     ]
   },
@@ -224,6 +220,204 @@
       {
         "ep": 16,
         "url": "https://vip.opstream12.com/20251016/28739_ecc1d44b/3000k/hls/mixed.m3u8"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Perfect 10 Liners",
+    "episodes": [
+      {
+        "ep": 1,
+        "url": "https://vip.opstream13.com/20251012/12086_42a1aa5d/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 2,
+        "url": "https://vip.opstream13.com/20251012/12087_ca07544b/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 3,
+        "url": "https://vip.opstream13.com/20251012/12088_c71530d0/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 4,
+        "url": "https://vip.opstream13.com/20251012/12089_75e0d8c6/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 5,
+        "url": "https://vip.opstream13.com/20251012/12090_b285f019/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 6,
+        "url": "https://vip.opstream13.com/20251012/12091_845c31a2/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 7,
+        "url": "https://vip.opstream13.com/20251012/12092_397d6b4c/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 8,
+        "url": "https://vip.opstream13.com/20251012/12093_8864b99d/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 9,
+        "url": "https://vip.opstream13.com/20251012/12094_7f7ed8ec/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 10,
+        "url": "https://vip.opstream13.com/20251012/12095_f7eb4129/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 11,
+        "url": "https://vip.opstream13.com/20251012/12096_cea0c0b6/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 12,
+        "url": "https://vip.opstream13.com/20251012/12097_ed478140/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 13,
+        "url": "https://vip.opstream13.com/20251012/12098_f73c2c53/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 14,
+        "url": "https://vip.opstream13.com/20251012/12099_84c230a5/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 15,
+        "url": "https://vip.opstream13.com/20251012/12100_c8829bcf/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 16,
+        "url": "https://vip.opstream13.com/20251012/12101_ba01e039/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 17,
+        "url": "https://vip.opstream13.com/20251012/12102_c728615c/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 18,
+        "url": "https://vip.opstream13.com/20251012/12103_751f879c/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 19,
+        "url": "https://vip.opstream13.com/20251012/12104_2976a6e4/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 20,
+        "url": "https://vip.opstream13.com/20251012/12105_ca279b85/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 21,
+        "url": "https://vip.opstream13.com/20251012/12106_59378da7/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 22,
+        "url": "https://vip.opstream13.com/20251012/12107_d65862e5/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 23,
+        "url": "https://vip.opstream13.com/20251012/12108_786fc808/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 24,
+        "url": "https://vip.opstream13.com/20251012/12109_1b8e84dc/3000k/hls/mixed.m3u8"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Khemjira",
+    "episodes": [
+      {
+        "ep": 1,
+        "url": "https://vip.opstream90.com/20250810/10345_e1e4e65f/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 2,
+        "url": "https://vip.opstream90.com/20250817/10671_ea4c796c/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 3,
+        "url": "https://vip.opstream90.com/20250824/11114_ed1db771/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 4,
+        "url": "https://vip.opstream90.com/20250831/11457_57b4b4a2/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 5,
+        "url": "https://vip.opstream90.com/20250907/11923_08058bf5/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 6,
+        "url": "https://vip.opstream90.com/20250922/12777_553c3741/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 7,
+        "url": "https://vip.opstream90.com/20250922/12778_24e23677/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 8,
+        "url": "https://vip.opstream90.com/20250928/13238_0e762b65/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 9,
+        "url": "https://vip.opstream90.com/20251004/13970_4641f63d/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 10,
+        "url": "https://vip.opstream90.com/20251012/14750_c6ae0d36/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 11,
+        "url": "https://vip.opstream90.com/20251019/15387_2ef6b53b/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 12,
+        "url": "https://vip.opstream90.com/20251026/16105_1c1608a9/3000k/hls/mixed.m3u8"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Sammy's Children's Day",
+    "episodes": [
+      {
+        "ep": 1,
+        "url": "https://vip.opstream10.com/20260321/33113_f9a7f253/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 2,
+        "url": "https://vip.opstream10.com/20260321/33114_58c0c501/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 3,
+        "url": "https://vip.opstream10.com/20260321/33115_9d635aca/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 4,
+        "url": "https://vip.opstream10.com/20260405/33233_10d3aeb6/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 5,
+        "url": "https://vip.opstream10.com/20260405/33234_1211f0aa/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 6,
+        "url": "https://vip.opstream10.com/20260424/33464_180933be/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 7,
+        "url": "https://vip.opstream10.com/20260424/33465_e72c36d5/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 8,
+        "url": "https://vip.opstream10.com/20260430/33522_d9cd1725/3000k/hls/mixed.m3u8"
+      },
+      {
+        "ep": 9,
+        "url": "https://vip.opstream10.com/20260507/33590_960b0b80/3000k/hls/mixed.m3u8"
       }
     ]
   }
