@@ -3,197 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Phim Lau Ne 🎬</title>
+    <title>YouTube: @phimlaune</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Ambient layers -->
-    <div class="ambient-bg"></div>
     <div class="grain-overlay"></div>
-    <div class="scroll-progress" id="scrollProgress"></div>
-    <div class="toast-container" id="toastContainer"></div>
 
     <div class="app-container">
 
-        <!-- ===== HOME SCREEN ===== -->
         <div class="screen home-screen active" id="homeScreen">
 
             <header class="home-header">
-
-                <!-- Film strip decoration -->
-                <div class="filmstrip" aria-hidden="true">
-                    <div class="filmstrip-hole"></div>
-                    <div class="filmstrip-hole"></div>
-                    <div class="filmstrip-hole"></div>
-                    <div class="filmstrip-hole"></div>
-                    <div class="filmstrip-hole"></div>
-                    <div class="filmstrip-hole"></div>
-                    <div class="filmstrip-hole"></div>
-                </div>
-
                 <div class="logo-wrap">
-                    <div class="logo-icon" aria-hidden="true">🎬</div>
                     <h1 class="logo">Phim Lau Ne</h1>
                 </div>
-
-                <p class="logo-tagline">Xem phim online · Miễn phí</p>
-
-                <div class="header-divider" aria-hidden="true">
-                    <div class="divider-line"></div>
-                    <div class="divider-diamond"></div>
-                    <div class="divider-line"></div>
-                </div>
-
+                <p class="subtitle">Đang bảo trì!</p>
                 <a href="https://www.youtube.com/@phimlaune" target="_blank" rel="noopener" class="youtube-link">
-                    <span class="yt-dot"></span>
-                    YouTube · @phimlaune
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    @phimlaune
                 </a>
             </header>
 
-            <!-- Stats bar -->
-            <div class="stats-bar" id="statsBar" aria-label="Thống kê">
-                <div class="stat-item">
-                    <div class="stat-value" id="statMovies">—</div>
-                    <div class="stat-label">Bộ phim</div>
+            <div class="search-container">
+                <div class="search-inner">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Tìm tên phim..." autocomplete="off">
                 </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="statEpisodes">—</div>
-                    <div class="stat-label">Tập phim</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">HD</div>
-                    <div class="stat-label">Chất lượng</div>
-                </div>
+                <button class="search-btn" id="searchButton">Tìm kiếm</button>
             </div>
 
-            <!-- Search -->
-            <div class="search-wrap">
-                <div class="search-container">
-                    <div class="search-inner">
-                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="m21 21-4.35-4.35"/>
-                        </svg>
-                        <input type="text" class="search-input" id="searchInput"
-                               placeholder="Tìm tên phim..." autocomplete="off" aria-label="Tìm kiếm phim">
-                        <button class="search-clear" id="searchClear" aria-label="Xóa tìm kiếm">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                                <path d="M18 6 6 18M6 6l12 12"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <button class="search-btn" id="searchButton" aria-label="Tìm kiếm">Tìm</button>
-                </div>
-
-                <!-- Filter pills -->
-                <div class="filter-row" id="filterRow" role="group" aria-label="Lọc phim">
-                    <button class="filter-pill active" data-filter="all">Tất cả</button>
-                    <button class="filter-pill" data-filter="multi">Nhiều tập</button>
-                    <button class="filter-pill" data-filter="single">1 tập</button>
-                </div>
-            </div>
-
-            <!-- Section label -->
-            <div class="section-label" aria-live="polite">
+            <div class="section-label">
                 <span class="section-label-text">Danh sách phim</span>
-                <span class="section-count" id="movieCount">0</span>
-                <div class="section-line" aria-hidden="true"></div>
+                <div class="section-line"></div>
             </div>
 
-            <div class="movie-grid" id="movieListContainer" role="list"></div>
-
-            <footer class="home-footer">
-                Phim Lau Ne · Tất cả video thuộc sở hữu của chủ sở hữu tương ứng
-            </footer>
+            <div class="movie-grid" id="movieListContainer"></div>
         </div>
 
-        <!-- ===== PLAYER SCREEN ===== -->
         <div class="screen player-screen" id="playerScreen">
-
             <div class="player-header">
-                <button class="back-btn" id="backButton" aria-label="Quay lại danh sách">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                        <path d="m15 18-6-6 6-6"/>
-                    </svg>
+                <button class="back-btn" id="backButton">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
                     Quay lại
                 </button>
-                <div class="player-title-wrap">
-                    <div class="player-breadcrumb">
-                        <span>Phim Lau Ne</span>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                        <span id="playerBreadcrumb">Đang xem</span>
-                    </div>
-                    <h2 class="player-title" id="playerMovieTitle"></h2>
-                </div>
+                <span class="player-title" id="playerMovieTitle"></span>
             </div>
 
             <div class="video-wrapper">
-                <div class="video-container" id="videoContainer">
+                <div class="video-container">
                     <video id="videoPlayer" controls playsinline crossorigin="anonymous"></video>
                 </div>
             </div>
 
-            <!-- Episode info bar -->
-            <div class="ep-info-bar" id="epInfoBar">
-                <div class="ep-current-info">
-                    <span class="ep-current-badge" id="epCurrentBadge">Tập 1</span>
-                    <span class="ep-current-title" id="epCurrentTitle"></span>
-                </div>
-                <div class="ep-nav-btns">
-                    <button class="ep-nav-btn" id="prevEpBtn" aria-label="Tập trước" disabled>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                            <path d="m15 18-6-6 6-6"/>
-                        </svg>
-                    </button>
-                    <button class="ep-nav-btn" id="nextEpBtn" aria-label="Tập tiếp theo">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Episode list -->
             <div class="episodes-section">
-                <div class="episodes-heading">
-                    <div class="episodes-heading-left">
-                        <div class="episodes-heading-icon" aria-hidden="true">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                 stroke="#c9a96e" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="m9 8 6 4-6 4Z"/>
-                            </svg>
-                        </div>
-                        <span class="episodes-heading-text">Danh sách tập</span>
-                    </div>
-                    <span class="ep-total-badge" id="epTotalBadge"></span>
-                </div>
-                <div class="episode-list" id="episodeButtons" role="list"></div>
+                <h3 class="episodes-heading">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 8 6 4-6 4Z"/></svg>
+                    Danh sách tập
+                </h3>
+                <div class="episode-list" id="episodeButtons"></div>
             </div>
 
-            <div class="error-message" id="errorMessage" role="alert" aria-live="assertive">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 8v4M12 16h.01"/>
-                </svg>
-                <span id="errorText"></span>
-            </div>
+            <div class="error-message" id="errorMessage"></div>
         </div>
 
     </div>
