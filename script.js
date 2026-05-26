@@ -279,6 +279,7 @@
             const m = url.match(/\/file\/d\/([^/]+)/);
             if (m?.[1]) embedUrl = `https://drive.google.com/file/d/${m[1]}/preview`;
             youtubeIframe = makeIframe(embedUrl, 'autoplay');
+            youtubeIframe.classList.add('drive-embed');
             videoContainer.appendChild(youtubeIframe);
             hideVideoLoading();
             return;
