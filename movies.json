@@ -47,5 +47,29 @@
       { "ep": 8, "url": "https://v7.kkphimplayer7.com/20260515/sZciBXlN/index.m3u8" },
       { "ep": 9, "url": "https://vip.opstream90.com/20260523/32721_53e05338/3000k/hls/mixed.m3u8" }   
     ]
+  },
+  {
+    "id": 4,
+    "title": "Your Sky",
+    "description": "Teerak (Kong), một sinh viên năm nhất đại học đầy lạc quan, được các anh chị khóa trên đặt cho biệt danh mới là “má chảy xệ”. Một ngày nọ, tại một bữa tiệc, Teerak đồng ý uống rượu dù cho người bạn thân nhất cậu, Punlee khuyên anh không làm vậy. Trong khi Teerak say, một anh chàng cố gắng tán tỉnh cậu. Sau đó, chủ nhà hàng, Muenfah, anh trai của Punlee, đến giải cứu Teerak. Teerak say xỉn từ sau đó ngưỡng mộ Muenfah và dụ dỗ anh khi anh đưa cậu về nhà. Teerak cầu xin Muenfah hôn lên đầu mình, trong khi không biết rằng Muenfah đã thầm thích cậu một thời gian dài.",
+    "year": "2024",
+    "thumbnail": "https://i.mydramalist.com/nO2VO6_4c.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://youtu.be/mHqhosctY2w?si=stOWgp9IadheiC64" },   
+      { "ep": 2, "url": "https://youtu.be/YqI9CnLxKPo?si=vUXq3YyAG9UgUq9p" },
+      { "ep": 3, "url": "https://youtu.be/v02bLzSxmPw?si=aMMaokrLSis0P5rB" },
+      { "ep": 4, "url": "https://youtu.be/bxF6-YVgJ00?si=OgBQKkBI9ofhUqcc" },
+      { "ep": 5, "url": "https://youtu.be/s5igkPXrthI?si=XNR1FmEmWYZ7VuGu" },
+      { "ep": 6, "url": "https://youtu.be/0bYg1Ao72UI?si=ujrD8WyCO4-e6-m1" },
+      { "ep": 7, "url": "https://youtu.be/ZqMz9zZh0oU?si=AWKrt-DOwh6nizd8" },
+      { "ep": 8, "url": "https://youtu.be/23zmMPj-qgQ?si=lIN-7AD6yyg-wY17" },
+      { "ep": 9, "url": "https://youtu.be/yyYDxjfzUbg?si=22gFI8VnoJcMaUKr" },
+      { "ep": 10, "url": "https://youtu.be/H6B0BtDlQn4?si=iR7dnNAMmchiKtiL" },
+      { "ep": 11, "url": "https://youtu.be/HEqPhDfpxAY?si=r90bIexIMJXXmt5m" },
+      { "ep": 12, "url": "https://youtu.be/72ee1mWDVaA?si=vH7Afd3KHekolT67" },
+      { "ep": 13, "url": "https://youtu.be/UYvG2lHsRm4?si=HP5HziXGPEsIwgKQ" },
+      { "ep": 14, "url": "https://youtu.be/tDZs7KH60_c?si=SH-d6QK1ZrPUppMv" },
+      { "ep": 15, "url": "https://youtu.be/GkPhKwdezqI?si=nSz60_YdnCZtAd-n" }
+    ]
   }
 ]
