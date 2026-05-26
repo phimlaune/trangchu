@@ -280,6 +280,9 @@
             if (m?.[1]) embedUrl = `https://drive.google.com/file/d/${m[1]}/preview`;
             youtubeIframe = makeIframe(embedUrl, 'autoplay');
             youtubeIframe.classList.add('drive-embed');
+            // Bù offset cho toolbar header của Google Drive (~56px)
+            youtubeIframe.style.top = '-56px';
+            youtubeIframe.style.height = 'calc(100% + 56px)';
             videoContainer.appendChild(youtubeIframe);
             hideVideoLoading();
             return;
