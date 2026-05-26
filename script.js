@@ -472,6 +472,24 @@
         }
     });
 
+
+    /* ─── DONATION POPUP ─── */
+    const donateBtn    = document.getElementById('donateBtn');
+    const donatePopup  = document.getElementById('donatePopup');
+    const donateClose  = document.getElementById('donateClose');
+    const donateOverlay= document.getElementById('donateOverlay');
+
+    function openDonate()  { donatePopup.classList.add('open');    document.body.style.overflow = 'hidden'; }
+    function closeDonate() { donatePopup.classList.remove('open'); document.body.style.overflow = ''; }
+
+    if (donateBtn)     donateBtn.addEventListener('click', openDonate);
+    if (donateClose)   donateClose.addEventListener('click', closeDonate);
+    if (donateOverlay) donateOverlay.addEventListener('click', closeDonate);
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && donatePopup?.classList.contains('open')) closeDonate();
+    });
+
     /* ─── INIT ─── */
     fetchMovies();
 
