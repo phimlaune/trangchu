@@ -1,11 +1,22 @@
 [
   {
-    "title": "Tester",
-    "description": "Test",
+    "title": "Duang With You",
+    "description": "Câu chuyện về Duang là một sinh viên thiết kế nội thất nổi tiếng, thầm thương trộm nhớ Qin, một sinh viên khoa Âm nhạc nổi tiếng nhưng lạnh lùng. Không biết phải tiếp cận anh như thế nào, lời tỏ tình ban đầu của Duang không mấy thành công, nhưng anh không tuyệt vọng. Thay vì chờ đợi bị từ chối, anh cho Qin biết mình sẽ theo đuổi anh. Tuy nhiên, mãi đến khi một giảng viên ghép đôi họ cho một buổi biểu diễn trên sân khấu, Qin mới bắt đầu cảm thấy rung động.",
     "year": "2026",
     "thumbnail": "https://pic6.iqiyipic.com/image/20260211/b2/d7/a_100738056_m_601_vi_m2_260_360.jpg",
     "episodes": [
-      { "ep": 1, "url": "https://youtu.be/MBMttcyJLqY?si=5b26wW7ut3-32dkI" }
+      { "ep": 1, "url": "https://youtu.be/MBMttcyJLqY?si=5b26wW7ut3-32dkI" },
+      { "ep": 2, "url": "https://youtu.be/ehk7IO_Ny0s?si=DSuj_O62RfL7_8Fv" },
+      { "ep": 3, "url": "https://youtu.be/2ftx2pmVQyk?si=DLpgur3m6cTXzIxN" },
+      { "ep": 4, "url": "https://youtu.be/zLRCt-LEZIw?si=W7VLz5coTRyCue0p" },
+      { "ep": 5, "url": "https://youtu.be/aD3j5bvSpaw?si=hDbJ8a5rX2ffqyyd" },
+      { "ep": 6, "url": "https://youtu.be/JK_bIdeh1rg?si=H9vUMDU8XtJUcRlp" },
+      { "ep": 7, "url": "https://youtu.be/XWTLyu4v8yQ?si=lggH2tFOp64paJOj" },
+      { "ep": 8, "url": "https://youtu.be/tZKFmwQEMPQ?si=UM7GA65TPK-ULohg" },
+      { "ep": 9, "url": "https://youtu.be/lQWD3Qu-yP0?si=gFPWuzWMzZNHThDC" },
+      { "ep": 10, "url": "https://youtu.be/D8Ox4Q8dpjA?si=7j2OkJhQI8HFTuiL" },
+      { "ep": 11, "url": "https://youtu.be/JgxdRCVMPMk?si=UkDW5S_51qSikYdg" },
+      { "ep": 12, "url": "https://youtu.be/UbW14ttSNuI?si=3zhT3tDXJBYMsH-X" }      
     ]
   }
 ]
