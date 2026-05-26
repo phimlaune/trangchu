@@ -512,7 +512,7 @@ body {
     font-family: var(--font-body);
     font-weight: 600; font-size: 0.8rem;
     cursor: pointer;
-    transition: all var(--t) var(--spring));
+    transition: all var(--t) var(--spring);
     white-space: nowrap;
     flex-shrink: 0;
 }
