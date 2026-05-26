@@ -29,5 +29,24 @@
     "episodes": [
       { "ep": 1, "url": "https://youtu.be/MBMttcyJLqY?si=5b26wW7ut3-32dkI" }
     ]
+  },
+  {
+    "id": 3,
+    "title": "Love Upon A Time",
+    "description": "Câu chuyện về Nakhun là một chàng sinh viên hai mươi tuổi không mê tín. Một ngày nọ, số phận trêu ngươi anh và anh du hành ngược thời gian trở về Vương quốc Ayutthaya gần bốn trăm năm trước. Anh bị nhầm lẫn với một người đã mất tích, vì vậy Nakhun đã giả danh Klao và cố gắng khám phá bí ẩn về sự mất tích của anh trai mình trong khi tìm cách trở về thời đại của mình. Phop, bạn của Klao, không tin Nakhun là em trai mình và luôn để mắt đến anh.",
+    "year": "2026",
+    "thumbnail": "https://www.glvietsub.net/wp-content/uploads/Phim-Love-Upon-A-Time.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://youtu.be/ZbZew3JDbUc?si=zPrRiV0tQ5AVx3oB" },
+      { "ep": 2, "url": "https://s6.kkphimplayer6.com/20260404/0vm1loGb/3500kb/hls/index.m3u8" },
+      { "ep": 3, "url": "https://s6.kkphimplayer6.com/20260412/KO6JiNSY/3500kb/hls/index.m3u8" },
+      { "ep": 4, "url": "https://v7.kkphimplayer7.com/20260418/4OaImU07/3500kb/hls/index.m3u8" },
+      { "ep": 5, "url": "https://v7.kkphimplayer7.com/20260425/mNElzgbW/3500kb/hls/index.m3u8" },
+      { "ep": 6, "url": "https://vip.opstream90.com/20260502/30751_f6b35e52/3000k/hls/mixed.m3u8" },
+      { "ep": 7, "url": "
+https://vod3.cf.dmcdn.net/sec2(6lPVTlt5vVxI3OlDyDbvqWIpWPOD2uxcQduYjGJ1QUkw-zuoFj5hGzsAGQp-k8u0-C7QpRRnvLlcd9-l-o_PBsQSjYxp3yqQSNxQIVA1J7GpBGBJi2xS1ekxtKEmRDkewmpuaNZfeVJbQOiHrpaUIf7wWpobZKKLLFe-oTfn-N27Gd2-awkBnsyUJ1mb9VdyY2yZvamvx6DG_73-nWq2yQ)/video/fmp4/619187820/h264_sd/3/manifest.m3u8" },
+      { "ep": 8, "url": "https://v7.kkphimplayer7.com/20260515/sZciBXlN/3500kb/hls/index.m3u8" },
+      { "ep": 9, "url": "https://vip.opstream90.com/20260523/32721_53e05338/3000k/hls/mixed.m3u8" }   
+    ]
   }
 ]
