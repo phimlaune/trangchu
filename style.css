@@ -404,7 +404,7 @@ body {
     display: flex;
     align-items: stretch;
     gap: 0;
-    height: 110px;
+    min-height: 100px;
 }
 
 .card-poster {
@@ -438,10 +438,11 @@ body {
 
 .card-body {
     flex: 1;
-    padding: 16px 18px 16px 20px;
+    padding: 14px 18px 14px 18px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 4px;
     min-width: 0;
 }
 
@@ -458,11 +459,15 @@ body {
 .card-title {
     font-size: 1rem; font-weight: 600;
     color: var(--text-hi);
-    white-space: nowrap; overflow: hidden;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     letter-spacing: -0.2px;
     line-height: 1.3;
     margin-bottom: 4px;
+    word-break: break-word;
 }
 
 .card-desc {
@@ -996,7 +1001,8 @@ video {
        Chiều cao cố định nhỏ gọn
        ════════════════════════════ */
     .list-view .movie-card {
-        height: 88px;       /* nhỏ gọn hơn nhiều */
+        min-height: 82px;
+        height: auto;
         border-radius: var(--r-md);
     }
 
@@ -1006,8 +1012,8 @@ video {
     }
 
     .list-view .card-body {
-        padding: 10px 12px 10px 14px;
-        gap: 0;
+        padding: 10px 12px 10px 12px;
+        gap: 3px;
         justify-content: center;
     }
 
@@ -1188,7 +1194,7 @@ video {
     .app-container  { padding: 0 28px 80px; }
     .home-header    { padding: 48px 0 36px; }
 
-    .list-view .movie-card  { height: 116px; }
+    .list-view .movie-card  { min-height: 100px; height: auto; }
     .list-view .card-poster { width: 175px; }
 
     .movie-container.grid-view {
@@ -1244,6 +1250,8 @@ video {
     z-index: 20000;
     align-items: center; justify-content: center;
     padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .donate-popup.open { display: flex; }
 
@@ -1362,10 +1370,13 @@ video {
     .donate-card {
         padding: 28px 20px 24px;
         border-radius: var(--r-lg);
+        max-height: 90vh;
+        overflow-y: auto;
+        margin: auto;
     }
     .donate-title   { font-size: 1.25rem; }
-    .donate-qr      { width: 170px; height: 170px; }
-    .donate-qr-wrap { padding: 12px; }
+    .donate-qr      { width: 160px; height: 160px; }
+    .donate-qr-wrap { padding: 10px; }
 }
 
 @media (max-width: 399px) {
