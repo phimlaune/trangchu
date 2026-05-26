@@ -479,8 +479,21 @@
     const donateClose  = document.getElementById('donateClose');
     const donateOverlay= document.getElementById('donateOverlay');
 
-    function openDonate()  { donatePopup.classList.add('open');    document.body.style.overflow = 'hidden'; }
-    function closeDonate() { donatePopup.classList.remove('open'); document.body.style.overflow = ''; }
+    let scrollY = 0;
+    function openDonate() {
+        scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = '100%';
+        donatePopup.classList.add('open');
+    }
+    function closeDonate() {
+        donatePopup.classList.remove('open');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollY);
+    }
 
     if (donateBtn)     donateBtn.addEventListener('click', openDonate);
     if (donateClose)   donateClose.addEventListener('click', closeDonate);
