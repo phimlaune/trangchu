@@ -1,7 +1,11 @@
 [
   {
-    "id": 1,
-    "title": "Đang bảo trì!",
-    "episodes": []
+    "title": "Tester",
+    "description": "Test",
+    "year": "2026",
+    "thumbnail": "https://pic6.iqiyipic.com/image/20260211/b2/d7/a_100738056_m_601_vi_m2_260_360.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://youtu.be/MBMttcyJLqY?si=5b26wW7ut3-32dkI" }
+    ]
   }
 ]
