@@ -38,10 +38,35 @@
                             <span class="logo-tagline">Xem phim cùng gia đình</span>
                         </div>
                     </div>
-                    <a href="https://www.youtube.com/@phimlaune" target="_blank" rel="noopener" class="yt-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        @phimlaune
-                    </a>
+                    <div class="header-actions">
+                        <a href="https://www.youtube.com/@phimlaune" target="_blank" rel="noopener" class="yt-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            @phimlaune
+                        </a>
+                        <button class="donate-btn" id="donateBtn" aria-label="Ủng hộ">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-.521-.609-1.057-1.198-1.547-1.75C7.119 16.228 4 12.818 4 9.5 4 6.462 6.462 4 9.5 4c1.468 0 2.876.577 3.916 1.601A5.48 5.48 0 0 1 14.5 4C17.538 4 20 6.462 20 9.5c0 3.318-3.119 6.728-6.453 10.343-.49.552-1.026 1.141-1.547 1.75Z"/></svg>
+                            Ủng hộ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DONATION POPUP -->
+                <div class="donate-popup" id="donatePopup">
+                    <div class="donate-overlay" id="donateOverlay"></div>
+                    <div class="donate-card">
+                        <button class="donate-close" id="donateClose" aria-label="Đóng">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                        </button>
+                        <div class="donate-header">
+                            <span class="donate-heart">💛</span>
+                            <h3 class="donate-title">Ủng hộ kênh</h3>
+                            <p class="donate-subtitle">Cảm ơn bạn đã yêu thương kênh!<br>Mọi sự ủng hộ đều giúp kênh duy trì hoạt động.</p>
+                        </div>
+                        <div class="donate-qr-wrap">
+                            <img src="donation.png" alt="QR ủng hộ" class="donate-qr">
+                        </div>
+                        <p class="donate-note">Quét mã QR để chuyển khoản ủng hộ</p>
+                    </div>
                 </div>
 
                 <div class="hero-banner">
