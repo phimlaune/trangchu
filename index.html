@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Phim Lậu Nè — Rạp phim online</title>
+<meta name="description" content="Phim Lậu Nè - xem phim online miễn phí, giao diện rạp chiếu phim.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bulb-strip" aria-hidden="true"></div>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="logo.png" alt="Logo Phim Lậu Nè">
+      <div class="brand-text">PHIM LẬU NÈ<small>Rạp chiếu tại gia</small></div>
+    </div>
+
+    <div class="controls">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="searchInput" type="search" placeholder="Tìm tên phim...">
+      </div>
+      <div class="select-wrap">
+        <select id="countrySelect">
+          <option value="">Tất cả quốc gia</option>
+        </select>
+      </div>
+      <div class="view-toggle" role="group" aria-label="Chuyển kiểu hiển thị">
+        <button id="viewGrid" title="Hiển thị dạng lưới" aria-label="Hiển thị dạng lưới">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </button>
+        <button id="viewList" title="Hiển thị dạng danh sách" aria-label="Hiển thị dạng danh sách">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>ĐANG <span>CHIẾU</span></h1>
+  <p>Chọn một bộ phim để bắt đầu — tấm vé của bạn đang chờ.</p>
+</section>
+
+<main>
+  <div id="movieGrid" class="movie-grid" aria-live="polite"></div>
+</main>
+
+<button id="donateFab" class="donate-fab" title="Ủng hộ website">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  <span>Ủng hộ</span>
+</button>
+
+<div id="donateOverlay" class="modal-overlay">
+  <div class="modal-box">
+    <h3>CẢM ƠN BẠN 🎟️</h3>
+    <img src="donation.png" alt="Mã QR ủng hộ">
+    <div class="close-x" data-close-modal>Đóng</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

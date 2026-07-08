@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đang xem — Phim Lậu Nè</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bulb-strip" aria-hidden="true"></div>
+  <div class="header-inner">
+    <a class="back-btn" href="index.html">‹ Về Rạp</a>
+  </div>
+</header>
+
+<div class="watch-wrap">
+  <div class="player-frame">
+    <video id="videoPlayer" controls autoplay playsinline></video>
+  </div>
+  <h1 id="watchTitle" class="watch-title"></h1>
+
+  <div class="section-label">CHỌN TẬP</div>
+  <div id="watchEpGrid" class="ep-grid"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>

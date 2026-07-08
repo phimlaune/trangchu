@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chi tiết phim — Phim Lậu Nè</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bulb-strip" aria-hidden="true"></div>
+  <div class="header-inner">
+    <a class="back-btn" href="index.html">‹ Về Rạp</a>
+    <div class="brand" style="margin-right:0;">
+      <img src="logo.png" alt="Logo Phim Lậu Nè">
+      <div class="brand-text">PHIM LẬU NÈ<small>Rạp chiếu tại gia</small></div>
+    </div>
+  </div>
+</header>
+
+<div class="backdrop">
+  <img id="backdropImg" src="" alt="">
+</div>
+
+<div id="detailWrap" class="detail-wrap">
+  <div class="detail-head">
+    <div class="poster-stand">
+      <img id="posterImg" src="" alt="">
+    </div>
+    <div class="detail-meta">
+      <span id="movieCountry" class="country-pill"></span>
+      <h1 id="movieTitle"></h1>
+      <p id="movieEpTotal" class="ep-total"></p>
+      <p id="movieDesc" class="desc"></p>
+    </div>
+  </div>
+
+  <div class="section-label">DANH SÁCH TẬP</div>
+  <div id="epGrid" class="ep-grid"></div>
+</div>
+
+<button id="donateFab" class="donate-fab" title="Ủng hộ website">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  <span>Ủng hộ</span>
+</button>
+
+<div id="donateOverlay" class="modal-overlay">
+  <div class="modal-box">
+    <h3>CẢM ƠN BẠN 🎟️</h3>
+    <img src="donation.png" alt="Mã QR ủng hộ">
+    <div class="close-x" data-close-modal>Đóng</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

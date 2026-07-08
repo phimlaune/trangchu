@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Duang With You",
+    "description": "Câu chuyện về Duang, một sinh viên thiết kế nội thất nổi tiếng, thầm thương trộm nhớ Qin, một sinh viên khoa Âm nhạc nổi tiếng nhưng lạnh lùng. Không biết phải tiếp cận anh như thế nào, lời tỏ tình ban đầu của Duang không mấy thành công, nhưng anh không tuyệt vọng. Thay vì chờ đợi bị từ chối, anh cho Qin biết mình sẽ theo đuổi anh. Tuy nhiên, mãi đến khi một giảng viên ghép đôi họ cho một buổi biểu diễn trên sân khấu, Qin mới bắt đầu cảm thấy rung động.",
+    "country": "Thái Lan",
+    "thumbnail": "https://pic6.iqiyipic.com/image/20260211/b2/d7/a_100738056_m_601_vi_m2_260_360.jpg",
+    "episodes": [
+      { "ep": 1, "url": "" }
+    ]
+  }
+]
