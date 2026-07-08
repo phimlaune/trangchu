@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Báo Thù (Payback)",
+    "title": "Payback",
     "description": "Một nhân viên đòi nợ thuê đang ôm nỗi đau mất mát quyết định dấn thân vào thế giới giải trí đầy rẫy thị phi để tìm cách trả thù. Thế nhưng, tại nơi đây, người này lại bất ngờ rơi vào một mối tình đầy nguy hiểm và mê hoặc với một vị giám đốc điều hành quyền lực.",
     "country": "Thái Lan",
     "thumbnail": "https://img.phimapi.com/upload/vod/20260531-1/44b98f8dceee0f4b7f0a576c9237410e.jpg",
@@ -16,7 +16,7 @@
   },
   {
     "id": 2,
-    "title": "Duyên Kiếp Bên Người (Love Upon A Time)",
+    "title": "Love Upon A Time",
     "description": "Một người đàn ông hiện đại bị xuyên không về quá khứ 400 năm trước. Tại đây, anh buộc phải giả danh làm con trai của một tội phạm đang mất tích, đồng thời nảy sinh tình cảm với một vị quý tộc đầy nghi hoặc.",
     "country": "Thái Lan",
     "thumbnail": "https://img.phimapi.com/upload/vod/20260330-1/317afc1b759d35308ed20ce62a990f1a.jpg",
@@ -33,6 +33,16 @@
       { "ep": 10, "url": "https://v7.kkphimplayer7.com/20260529/Z2OgClhQ/index.m3u8" },
       { "ep": 11, "url": "https://v7.kkphimplayer7.com/20260605/4msESHHi/index.m3u8" },
       { "ep": 12, "url": "https://v7.kkphimplayer7.com/20260612/BERAG4cX/index.m3u8" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cherm Chey The Series",
+    "description": "Akkhara, người đã nhiều lần bị tổn thương trong tình yêu, khó tin rằng mình sẽ gặp được tình yêu đích thực trong đời này. Một ngày nọ, anh ước nguyện tại một ngôi chùa, tự nhủ với bản thân rằng hãy thử thêm một lần cuối cùng. Ngay lúc đó, anh gặp Intha, một ông chủ quán bar mạnh mẽ và tự tin. Intha tin tưởng vào trực giác của mình và bắt đầu theo đuổi Akkhara một cách công khai, nhưng Akkhara, bị ám ảnh bởi những nỗi đau trong quá khứ, không thể chấp nhận tình cảm của mình. Khi cả hai cùng làm việc và sống tại quán bar ChermChey, rượu bia làm cho trái tim họ rộng mở hơn và sự quan tâm thường nhật kéo họ lại gần nhau hơn, họ dần dần từ những người xa lạ trở thành người mà mỗi người muốn bảo vệ nhất.",
+    "country": "Thái Lan",
+    "thumbnail": "https://www.glvietsub.net/wp-content/uploads/Cherm-Chey.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://namev1.top/public/m3u8/job_1779894671462.m3u8" }
     ]
   }
 ]
