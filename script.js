@@ -173,7 +173,7 @@ async function initWatch() {
   document.title = `${movie.title} - Tập ${episode.ep} — Phim Lậu Nè`;
   qs("#watchTitle").innerHTML = `${escapeHtml(movie.title)} <span>— Tập ${episode.ep}</span>`;
 
-  player.src = buildEmbedUrl(episode.url);
+  setupPlayer(episode.url);
 
   const epGrid = qs("#watchEpGrid");
   epGrid.innerHTML = movie.episodes.map(e => `
@@ -181,18 +181,51 @@ async function initWatch() {
   `).join("");
 }
 
-function buildEmbedUrl(url) {
-  // Nếu link đã là một trang player (iframe embed) thì dùng luôn.
+function setupPlayer(url) {
+  const frame = qs("#playerFrame");
+  const video = qs("#videoPlayer");
+  let fellBack = false;
+
+  function fallbackToEmbed() {
+    if (fellBack) return;
+    fellBack = true;
+    const iframe = document.createElement("iframe");
+    iframe.allow = "autoplay; fullscreen; picture-in-picture";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "no-referrer";
+    iframe.loading = "lazy";
+    iframe.src = `https://player.phimapi.com/player/?url=${encodeURIComponent(url)}`;
+    frame.innerHTML = "";
+    frame.appendChild(iframe);
+  }
+
+  // Link đã sẵn là trang player nhúng -> dùng iframe luôn, khỏi thử video.
   if (/player\.phimapi\.com\/player/i.test(url) || /\/embed/i.test(url)) {
-    return url;
+    fallbackToEmbed();
+    return;
   }
-  // Nhiều server .m3u8 (vd: kkphimplayer) chặn hotlink theo Referer,
-  // chỉ cho phát qua đúng player của họ -> nhúng qua player.phimapi.com
-  // để tránh bị chặn CORS/hotlink khi tự phát bằng thẻ <video>.
-  if (/\.m3u8(\?.*)?$/i.test(url)) {
-    return `https://player.phimapi.com/player/?url=${encodeURIComponent(url)}`;
+
+  // Bước 1: thử phát trực tiếp bằng <video> — hoạt động với các nguồn
+  // không chặn hotlink (vd: namev1.top).
+  if (video.canPlayType("application/vnd.apple.mpegurl")) {
+    video.src = url;
+    video.addEventListener("error", fallbackToEmbed, { once: true });
+    return;
   }
-  return url;
+  if (window.Hls && window.Hls.isSupported()) {
+    const hls = new window.Hls();
+    hls.on(window.Hls.Events.ERROR, (_evt, data) => {
+      // Bước 2: nguồn bị lỗi (thường do chặn hotlink theo Referer, vd:
+      // kkphimplayer) -> tự động chuyển sang nhúng qua player.phimapi.com.
+      if (data.fatal) fallbackToEmbed();
+    });
+    hls.loadSource(url);
+    hls.attachMedia(video);
+    return;
+  }
+
+  // Trình duyệt không hỗ trợ HLS kiểu nào cả -> dùng iframe cho chắc.
+  fallbackToEmbed();
 }
 
 /* ---------------- utils ---------------- */
