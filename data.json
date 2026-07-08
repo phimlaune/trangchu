@@ -6,12 +6,12 @@
     "country": "Thái Lan",
     "thumbnail": "https://img.phimapi.com/upload/vod/20260531-1/44b98f8dceee0f4b7f0a576c9237410e.jpg",
     "episodes": [
-      { "ep": 1, "url": "https://v7.kkphimplayer7.com/20260530/tx4SaShQ/index.m3u8" },
-      { "ep": 2, "url": "https://v7.kkphimplayer7.com/20260607/D1qWx7z0/index.m3u8" },
-      { "ep": 3, "url": "https://v7.kkphimplayer7.com/20260613/Nlo0ewcK/index.m3u8" },
-      { "ep": 4, "url": "https://v7.kkphimplayer7.com/20260621/kZzhYYMx/index.m3u8" },
-      { "ep": 5, "url": "https://v7.kkphimplayer7.com/20260627/IvLdUwrR/index.m3u8" },
-      { "ep": 6, "url": "https://v7.kkphimplayer7.com/20260704/SET9VOk9/index.m3u8" }
+      { "ep": 1, "url": "https://player.phimapi.com/player/?url=https://v7.kkphimplayer7.com/20260530/tx4SaShQ/index.m3u8" },
+      { "ep": 2, "url": "https://player.phimapi.com/player/?url=https://v7.kkphimplayer7.com/20260607/D1qWx7z0/index.m3u8" },
+      { "ep": 3, "url": "https://player.phimapi.com/player/?url=https://v7.kkphimplayer7.com/20260613/Nlo0ewcK/index.m3u8" },
+      { "ep": 4, "url": "https://player.phimapi.com/player/?url=https://v7.kkphimplayer7.com/20260621/kZzhYYMx/index.m3u8" },
+      { "ep": 5, "url": "https://player.phimapi.com/player/?url=https://v7.kkphimplayer7.com/20260627/IvLdUwrR/index.m3u8" },
+      { "ep": 6, "url": "https://player.phimapi.com/player/?url=https://v7.kkphimplayer7.com/20260704/SET9VOk9/index.m3u8" }
     ]
   }
 ]
