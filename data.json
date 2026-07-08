@@ -51,5 +51,22 @@
       { "ep": 7, "url": "https://namev1.top/public/m3u8/job_1782245063578.m3u8" },
       { "ep": 8, "url": "https://youtu.be/ClOqiiEmon8?si=38fphbMDZSoNtAAi" }
     ]
+  },
+  {
+    "id": 4,
+    "title": "When Oranges Fall",
+    "description": "Phim được chuyển thể từ web tiểu thuyết Ton Som Yu Ban Khao Tae Phon Som Lon Ma Ban Rao Talot Loei của Littleskyofme. Bộ phim là câu chuyện về Ko rất thích cam  nhưng chỉ thích cam nhà hàng xóm. Một ngày nọ, hàng xóm của cậu xuất hiện và tình cờ tiết lộ tên cậu cũng là Ko!",
+    "country": "Thái Lan",
+    "thumbnail": "",
+    "episodes": [
+      { "ep": 1, "url": "https://namev1.top/public/m3u8/job_1778690577519.m3u8" },
+      { "ep": 2, "url": "https://namev1.top/public/m3u8/job_1779296090777.m3u8" },
+      { "ep": 3, "url": "https://namev1.top/public/m3u8/job_1779899930528.m3u8" },
+      { "ep": 4, "url": "https://namev1.top/public/m3u8/job_1780506568842.m3u8" },
+      { "ep": 5, "url": "https://namev1.top/public/m3u8/job_1781110107965.m3u8" },
+      { "ep": 6, "url": "https://namev1.top/public/m3u8/job_1781715367011.m3u8" },
+      { "ep": 7, "url": "https://namev1.top/public/m3u8/job_1782319753171.m3u8" },
+      { "ep": 8, "url": "https://v7.kkphimplayer7.com/20260701/FfJO70wf/3500kb/hls/index.m3u8" }
+    ]
   }
 ]
