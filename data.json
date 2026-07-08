@@ -83,5 +83,36 @@
       { "ep": 5, "url": "https://namev1.top/public/m3u8/job_1782578747111.m3u8" },
       { "ep": 6, "url": "https://v7.kkphimplayer7.com/20260704/HJTkJoO0/3500kb/hls/index.m3u8" }
     ]
+  },
+  {
+    "id": 6,
+    "title": "Duang With You",
+    "description": "Câu chuyện về Duang là một sinh viên thiết kế nội thất nổi tiếng, thầm thương trộm nhớ Qin, một sinh viên khoa Âm nhạc nổi tiếng nhưng lạnh lùng. Không biết phải tiếp cận anh như thế nào, lời tỏ tình ban đầu của Duang không mấy thành công, nhưng anh không tuyệt vọng. Thay vì chờ đợi bị từ chối, anh cho Qin biết mình sẽ theo đuổi anh. Tuy nhiên, mãi đến khi một giảng viên ghép đôi họ cho một buổi biểu diễn trên sân khấu, Qin mới bắt đầu cảm thấy rung động.",
+    "country": "Thái Lan",
+    "thumbnail": "https://www.glvietsub.net/wp-content/uploads/Phim-Duang-With-You.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://vip.opstream90.com/20260201/23637_e7d12fcc/3000k/hls/mixed.m3u8" },
+      { "ep": 2, "url": "https://vip.opstream90.com/20260208/24498_79bfd663/3000k/hls/mixed.m3u8" },
+      { "ep": 3, "url": "https://vip.opstream90.com/20260215/25053_cedb7f24/3000k/hls/mixed.m3u8" },
+      { "ep": 4, "url": "https://vip.opstream90.com/20260221/25556_9fd54dd7/3000k/hls/mixed.m3u8" },
+      { "ep": 5, "url": "https://vip.opstream90.com/20260301/26088_b06e70e3/3000k/hls/mixed.m3u8" },
+      { "ep": 6, "url": "https://vip.opstream90.com/20260308/26723_254025c5/3000k/hls/mixed.m3u8" },
+      { "ep": 7, "url": "https://vip.opstream90.com/20260315/27248_299024cf/3000k/hls/mixed.m3u8" },
+      { "ep": 8, "url": "https://vip.opstream90.com/20260321/27694_569d09d5/3000k/hls/mixed.m3u8" },
+      { "ep": 9, "url": "https://vip.opstream90.com/20260329/28195_c6029c2e/3000k/hls/mixed.m3u8" },
+      { "ep": 10, "url": "https://vip.opstream90.com/20260405/28838_57cb497d/3000k/hls/mixed.m3u8" },
+      { "ep": 11, "url": "https://namev1.top/public/m3u8/job_1775922556752.m3u8" },
+      { "ep": 12, "url": "https://namev1.top/public/m3u8/job_1776528214799.m3u8" }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "KNOT",
+    "description": "Phatsa lớn lên mà không hề biết đến sự tồn tại của alpha, beta và omega trên thế giới này. Một đêm nọ, cuộc đời cậu bị đảo lộn khi Nakhun, một True Alpha lạnh lùng, nghiêm khắc và là người thừa kế đầu tiên của một gia tộc quyền lực, bất ngờ cắn cậu, tạo nên một mối liên kết không thể phá vỡ giữa hai người. Từ những người hoàn toàn xa lạ, họ buộc phải sống chung dưới những quy tắc của một mối ràng buộc mà cả hai đều không thể chống lại. Càng thân thiết, mối liên kết càng sâu đậm. Mối ràng buộc càng mạnh, càng khó thoát ra. Và điều đáng sợ nhất là, với tư cách là bạn đời định mệnh, một khi mối ràng buộc của họ hoàn toàn được thiết lập, nếu một trong hai người chết, người kia chắc chắn sẽ theo sau – mà không có bất kỳ cơ hội kháng cự nào. Đây không chỉ đơn thuần là một câu chuyện tình yêu. Đó là câu chuyện về một mối ràng buộc đặt cược tất cả mọi thứ – cuộc sống, trái tim và cả số phận.",
+    "country": "Thái Lan",
+    "thumbnail": "https://www.xemphimbl.net/wp-content/uploads/KNOT-Nut-That.webp",
+    "episodes": [
+      { "ep": 1, "url": "https://vip.opstream90.com/20260701/35871_c8d07e89/3000k/hls/mixed.m3u8" }
+    ]
   }
 ]
