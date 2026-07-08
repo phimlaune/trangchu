@@ -68,5 +68,20 @@
       { "ep": 7, "url": "https://namev1.top/public/m3u8/job_1782319753171.m3u8" },
       { "ep": 8, "url": "https://v7.kkphimplayer7.com/20260701/FfJO70wf/3500kb/hls/index.m3u8" }
     ]
+  },
+  {
+    "id": 5,
+    "title": "Ticket To Heaven",
+    "description": "Khi chàng trai đầy tâm sự Barth chuyển đến trường chủng viện, chủng sinh trẻ Tanrak được giao nhiệm vụ chăm sóc và giúp cậu đi đúng hướng. Thế nhưng, sự xuất hiện của Barth lại vô tình trở thành phép thử đối với Tanrak, khi anh phải vật lộn giữa những cảm xúc chân thật trong lòng mình với đức tin, cùng nỗi lo sợ về tương lai phía trước.",
+    "country": "Thái Lan",
+    "thumbnail": "https://www.xemphimbl.net/wp-content/uploads/Ticket-To-Heaven.webp",
+    "episodes": [
+      { "ep": 1, "url": "https://v7.kkphimplayer7.com/20260531/5qmGJXwH/3500kb/hls/index.m3u8" },
+      { "ep": 2, "url": "https://v7.kkphimplayer7.com/20260607/dwnc8Flx/3500kb/hls/index.m3u8" },
+      { "ep": 3, "url": "https://v7.kkphimplayer7.com/20260613/4v8FiQ6Q/3500kb/hls/index.m3u8" },
+      { "ep": 4, "url": "https://v7.kkphimplayer7.com/20260621/hXyl8mTb/3500kb/hls/index.m3u8" },
+      { "ep": 5, "url": "https://namev1.top/public/m3u8/job_1782578747111.m3u8" },
+      { "ep": 6, "url": "https://v7.kkphimplayer7.com/20260704/HJTkJoO0/3500kb/hls/index.m3u8" }
+    ]
   }
 ]
