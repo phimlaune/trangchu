@@ -21,7 +21,11 @@
 
 <div class="watch-wrap">
   <div class="player-frame">
-    <video id="videoPlayer" controls autoplay playsinline></video>
+    <iframe id="videoPlayer"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      referrerpolicy="no-referrer"
+      loading="lazy"></iframe>
   </div>
   <h1 id="watchTitle" class="watch-title"></h1>
 
@@ -29,7 +33,6 @@
   <div id="watchEpGrid" class="ep-grid"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="script.js"></script>
 </body>
 </html>
