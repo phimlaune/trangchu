@@ -173,7 +173,7 @@ async function initWatch() {
   document.title = `${movie.title} - Tập ${episode.ep} — Phim Lậu Nè`;
   qs("#watchTitle").innerHTML = `${escapeHtml(movie.title)} <span>— Tập ${episode.ep}</span>`;
 
-  loadHls(player, episode.url);
+  player.src = buildEmbedUrl(episode.url);
 
   const epGrid = qs("#watchEpGrid");
   epGrid.innerHTML = movie.episodes.map(e => `
@@ -181,18 +181,18 @@ async function initWatch() {
   `).join("");
 }
 
-function loadHls(videoEl, url) {
-  if (videoEl.canPlayType("application/vnd.apple.mpegurl")) {
-    videoEl.src = url;
-    return;
+function buildEmbedUrl(url) {
+  // Nếu link đã là một trang player (iframe embed) thì dùng luôn.
+  if (/player\.phimapi\.com\/player/i.test(url) || /\/embed/i.test(url)) {
+    return url;
   }
-  if (window.Hls && window.Hls.isSupported()) {
-    const hls = new window.Hls();
-    hls.loadSource(url);
-    hls.attachMedia(videoEl);
-    return;
+  // Nhiều server .m3u8 (vd: kkphimplayer) chặn hotlink theo Referer,
+  // chỉ cho phát qua đúng player của họ -> nhúng qua player.phimapi.com
+  // để tránh bị chặn CORS/hotlink khi tự phát bằng thẻ <video>.
+  if (/\.m3u8(\?.*)?$/i.test(url)) {
+    return `https://player.phimapi.com/player/?url=${encodeURIComponent(url)}`;
   }
-  videoEl.src = url; // fallback attempt
+  return url;
 }
 
 /* ---------------- utils ---------------- */
