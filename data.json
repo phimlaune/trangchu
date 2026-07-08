@@ -13,5 +13,26 @@
       { "ep": 5, "url": "https://v7.kkphimplayer7.com/20260627/IvLdUwrR/index.m3u8" },
       { "ep": 6, "url": "https://v7.kkphimplayer7.com/20260704/SET9VOk9/index.m3u8" }
     ]
+  },
+  {
+    "id": 2,
+    "title": "Duyên Kiếp Bên Người (Love Upon A Time)",
+    "description": "Một người đàn ông hiện đại bị xuyên không về quá khứ 400 năm trước. Tại đây, anh buộc phải giả danh làm con trai của một tội phạm đang mất tích, đồng thời nảy sinh tình cảm với một vị quý tộc đầy nghi hoặc.",
+    "country": "Thái Lan",
+    "thumbnail": "https://img.phimapi.com/upload/vod/20260330-1/317afc1b759d35308ed20ce62a990f1a.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://s6.kkphimplayer6.com/20260329/UT4ZXkGm/index.m3u8" },
+      { "ep": 2, "url": "https://s6.kkphimplayer6.com/20260404/0vm1loGb/index.m3u8" },
+      { "ep": 3, "url": "https://s6.kkphimplayer6.com/20260412/KO6JiNSY/index.m3u8" },
+      { "ep": 4, "url": "https://v7.kkphimplayer7.com/20260418/4OaImU07/index.m3u8" },
+      { "ep": 5, "url": "https://v7.kkphimplayer7.com/20260425/mNElzgbW/index.m3u8" },
+      { "ep": 6, "url": "https://v7.kkphimplayer7.com/20260502/KDEmbjTw/index.m3u8" },
+      { "ep": 7, "url": "https://v7.kkphimplayer7.com/20260509/Bur2hh1O/index.m3u8" },
+      { "ep": 8, "url": "https://v7.kkphimplayer7.com/20260515/sZciBXlN/index.m3u8" },
+      { "ep": 9, "url": "https://v7.kkphimplayer7.com/20260522/EMszGy0l/index.m3u8" },
+      { "ep": 10, "url": "https://v7.kkphimplayer7.com/20260529/Z2OgClhQ/index.m3u8" },
+      { "ep": 11, "url": "https://v7.kkphimplayer7.com/20260605/4msESHHi/index.m3u8" },
+      { "ep": 12, "url": "https://v7.kkphimplayer7.com/20260612/BERAG4cX/index.m3u8" }
+    ]
   }
 ]
