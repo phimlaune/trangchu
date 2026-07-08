@@ -42,7 +42,13 @@
     "country": "Thái Lan",
     "thumbnail": "https://www.glvietsub.net/wp-content/uploads/Cherm-Chey.jpg",
     "episodes": [
-      { "ep": 1, "url": "https://namev1.top/public/m3u8/job_1779894671462.m3u8" }
+      { "ep": 1, "url": "https://namev1.top/public/m3u8/job_1779894671462.m3u8" },
+      { "ep": 2, "url": "https://namev1.top/public/m3u8/job_1779876586688.m3u8" },
+      { "ep": 3, "url": "https://namev1.top/public/m3u8/job_1779876757974.m3u8" },
+      { "ep": 4, "url": "https://namev1.top/public/m3u8/job_1780442380875.m3u8" },
+      { "ep": 5, "url": "https://namev1.top/public/m3u8/job_1781026488005.m3u8" },
+      { "ep": 6, "url": "https://namev1.top/public/m3u8/job_1781864112657.m3u8" },
+      { "ep": 7, "url": "https://namev1.top/public/m3u8/job_1782245063578.m3u8" }
     ]
   }
 ]
