@@ -181,22 +181,47 @@ async function initWatch() {
   `).join("");
 }
 
+function extractYoutubeId(url) {
+  const patterns = [
+    /youtu\.be\/([A-Za-z0-9_-]{6,})/,
+    /youtube\.com\/watch\?v=([A-Za-z0-9_-]{6,})/,
+    /youtube\.com\/embed\/([A-Za-z0-9_-]{6,})/,
+    /youtube\.com\/shorts\/([A-Za-z0-9_-]{6,})/
+  ];
+  for (const re of patterns) {
+    const m = url.match(re);
+    if (m) return m[1];
+  }
+  return null;
+}
+
 function setupPlayer(url) {
   const frame = qs("#playerFrame");
   const video = qs("#videoPlayer");
   let fellBack = false;
 
-  function fallbackToEmbed() {
-    if (fellBack) return;
-    fellBack = true;
+  function showIframe(src) {
     const iframe = document.createElement("iframe");
     iframe.allow = "autoplay; fullscreen; picture-in-picture";
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = "no-referrer";
     iframe.loading = "lazy";
-    iframe.src = `https://player.phimapi.com/player/?url=${encodeURIComponent(url)}`;
+    iframe.src = src;
     frame.innerHTML = "";
     frame.appendChild(iframe);
+  }
+
+  function fallbackToEmbed() {
+    if (fellBack) return;
+    fellBack = true;
+    showIframe(`https://player.phimapi.com/player/?url=${encodeURIComponent(url)}`);
+  }
+
+  // Link YouTube -> nhúng bằng YouTube embed player chính chủ.
+  const ytId = extractYoutubeId(url);
+  if (ytId) {
+    showIframe(`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`);
+    return;
   }
 
   // Link đã sẵn là trang player nhúng -> dùng iframe luôn, khỏi thử video.
