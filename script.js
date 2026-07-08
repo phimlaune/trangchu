@@ -181,6 +181,51 @@ async function initWatch() {
   `).join("");
 }
 
+let ytApiPromise = null;
+function loadYoutubeApi() {
+  if (ytApiPromise) return ytApiPromise;
+  ytApiPromise = new Promise((resolve) => {
+    if (window.YT && window.YT.Player) { resolve(); return; }
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+    window.onYouTubeIframeAPIReady = () => resolve();
+  });
+  return ytApiPromise;
+}
+
+function showYoutubeBlockedFallback(frame, videoId) {
+  frame.innerHTML = `
+    <div class="yt-blocked">
+      <p>Video này bị chủ kênh chặn phát trên các trang khác.</p>
+      <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener noreferrer">
+        Xem trực tiếp trên YouTube ↗
+      </a>
+    </div>`;
+}
+
+async function embedYoutube(frame, videoId) {
+  frame.innerHTML = `<div id="ytPlayerTarget"></div>`;
+  try {
+    await loadYoutubeApi();
+  } catch {
+    showYoutubeBlockedFallback(frame, videoId);
+    return;
+  }
+  new window.YT.Player("ytPlayerTarget", {
+    videoId,
+    playerVars: { autoplay: 1, rel: 0 },
+    events: {
+      onError: (e) => {
+        // 101 / 150 = chủ video tắt tính năng nhúng ở trang ngoài
+        if ([101, 150].includes(e.data)) {
+          showYoutubeBlockedFallback(frame, videoId);
+        }
+      }
+    }
+  });
+}
+
 function extractYoutubeId(url) {
   const patterns = [
     /youtu\.be\/([A-Za-z0-9_-]{6,})/,
@@ -217,10 +262,11 @@ function setupPlayer(url) {
     showIframe(`https://player.phimapi.com/player/?url=${encodeURIComponent(url)}`);
   }
 
-  // Link YouTube -> nhúng bằng YouTube embed player chính chủ.
+  // Link YouTube -> nhúng bằng YouTube IFrame API, tự phát hiện nếu
+  // chủ video khoá nhúng (lỗi 101/150) để chuyển sang nút xem trên YouTube.
   const ytId = extractYoutubeId(url);
   if (ytId) {
-    showIframe(`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`);
+    embedYoutube(frame, ytId);
     return;
   }
 
