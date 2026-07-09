@@ -114,5 +114,19 @@
     "episodes": [
       { "ep": 1, "url": "https://vip.opstream90.com/20260701/35871_c8d07e89/3000k/hls/mixed.m3u8" }
     ]
+  },
+  {
+    "id": 8,
+    "title": "The Prosecutor's Proposal",
+    "description": "Mười lăm năm trước, một vụ giết người tàn bạo đã kéo hai cậu bé vào địa ngục. Một người trở thành con trai của nạn nhân; người kia, lại là con của kẻ sát nhân. Nhiều năm sau, định mệnh đã đưa họ tái ngộ trong vai trò một công tố viên và một điều tra viên. Trong khi chiến đấu chống lại mạng lưới tham nhũng pháp lý và doanh nghiệp khổng lồ, họ phát hiện ra một điều còn nguy hiểm hơn thế: chính là đối phương. Họ là điểm yếu chí mạng — và cũng là sự cứu rỗi duy nhất của nhau.",
+    "country": "Méo Biết",
+    "thumbnail": "https://phimimg.com/upload/vod/20260627-1/00bad3e184efb751806ae1f5562ace36.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://v7.kkphimplayer7.com/20260627/UXYH2KDD/index.m3u8" },
+      { "ep": 2, "url": "https://v7.kkphimplayer7.com/20260627/MzSrROGp/index.m3u8" },
+      { "ep": 3, "url": "https://v7.kkphimplayer7.com/20260627/MzSrROGp/index.m3u8" },
+      { "ep": 4, "url": "https://v7.kkphimplayer7.com/20260703/d0Ndw1XR/index.m3u8" },
+      { "ep": 5, "url": "https://youtu.be/MzEFeIRJ0eQ?si=j-06hR3nbnNnRkKm" }
+    ]
   }
 ]
