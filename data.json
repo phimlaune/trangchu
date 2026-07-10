@@ -128,5 +128,24 @@
       { "ep": 4, "url": "https://v7.kkphimplayer7.com/20260703/d0Ndw1XR/index.m3u8" },
       { "ep": 5, "url": "https://youtu.be/MzEFeIRJ0eQ?si=j-06hR3nbnNnRkKm" }
     ]
+  },
+  {
+    "id": 9,
+    "title": "Sweet Home",
+    "description": "None",
+    "country": "Méo Biết",
+    "thumbnail": "https://phimmoie.fm/phim/the-gioi-ma-quai-1703305326/tap-1",
+    "episodes": [
+      { "ep": 1, "url": "https://hd1080.opstream2.com/20220509/12521_b40af50b/3000k/hls/mixed.m3u8" },
+      { "ep": 2, "url": "https://hd1080.opstream2.com/20220509/12522_e380edc0/3000k/hls/mixed.m3u8" },
+      { "ep": 3, "url": "https://hd1080.opstream2.com/20220509/12525_9590ba02/3000k/hls/mixed.m3u8" },
+      { "ep": 4, "url": "https://hd1080.opstream2.com/20220509/12527_2380017b/3000k/hls/mixed.m3u8" },
+      { "ep": 5, "url": "https://hd1080.opstream2.com/20220509/12529_5ddacdf7/3000k/hls/mixed.m3u8" },
+      { "ep": 6, "url": "https://hd1080.opstream2.com/20220509/12532_4e46d406/3000k/hls/mixed.m3u8" },
+      { "ep": 7, "url": "https://hd1080.opstream2.com/20220509/12534_167e83b5/3000k/hls/mixed.m3u8" },
+      { "ep": 8, "url": "https://hd1080.opstream2.com/20220509/12536_9bf0f887/3000k/hls/mixed.m3u8" },
+      { "ep": 9, "url": "https://hd1080.opstream2.com/20220509/12539_841029c4/3000k/hls/mixed.m3u8" },
+      { "ep": 10, "url": "https://hd1080.opstream2.com/20220509/12541_9550c11a/3000k/hls/mixed.m3u8" }
+    ]
   }
 ]
