@@ -147,5 +147,26 @@
       { "ep": 9, "url": "https://hd1080.opstream2.com/20220509/12539_841029c4/3000k/hls/mixed.m3u8" },
       { "ep": 10, "url": "https://hd1080.opstream2.com/20220509/12541_9550c11a/3000k/hls/mixed.m3u8" }
     ]
+  },
+  {
+    "id": 10,
+    "title": "Kemjira Will Survive",
+    "description": "Sinh ra trong một gia đình bị nguyền rủa, mẹ của Khem đã đặt cho anh một cái tên con gái – Khemjira – để bảo vệ anh khỏi cái chết trước tuổi 20. Anh luôn tin vào điều đó cho đến khi bước sang tuổi 19, sự thật mới dần hé lộ.",
+    "country": "Thái Lan",
+    "thumbnail": "https://phimimg.com/upload/vod/20250811-1/daac30998bc3ef0062d960eca2c0cc85.jpg",
+    "episodes": [
+      { "ep": 1, "url": "https://s6.kkphimplayer6.com/20250811/0vR3uzFB/index.m3u8" },
+      { "ep": 2, "url": "https://s6.kkphimplayer6.com/20250818/anqKEC4i/index.m3u8" },
+      { "ep": 3, "url": "https://s6.kkphimplayer6.com/20250829/VrtydO6j/index.m3u8" },
+      { "ep": 4, "url": "https://s6.kkphimplayer6.com/20250831/O5pcTyGF/index.m3u8" },
+      { "ep": 5, "url": "https://s6.kkphimplayer6.com/20250907/0NUujMcw/index.m3u8" },
+      { "ep": 6, "url": "https://s6.kkphimplayer6.com/20250914/aEVbuvIR/index.m3u8" },
+      { "ep": 7, "url": "https://s6.kkphimplayer6.com/20250921/bPDtpbGN/index.m3u8" },
+      { "ep": 8, "url": "https://s6.kkphimplayer6.com/20250927/qQMwIwET/index.m3u8" },
+      { "ep": 9, "url": "https://s6.kkphimplayer6.com/20251005/JBGM1Li3/index.m3u8" },
+      { "ep": 10, "url": "https://s6.kkphimplayer6.com/20251012/NHCyrlCF/index.m3u8" },
+      { "ep": 11, "url": "https://s6.kkphimplayer6.com/20251019/7p0uUxTf/index.m3u8" },
+      { "ep": 12, "url": "https://s6.kkphimplayer6.com/20251026/Gl7IA1Gw/index.m3u8" }
+    ]
   }
 ]
